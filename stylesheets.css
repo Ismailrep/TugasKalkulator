@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+html,
+body,
+p,
+button,
+div {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope';
+  list-style: none;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(BG-yellow.jpg);
+  background-size: cover;
+}
+
+p {
+  font-size: 30px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  position: relative;
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid>button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+footer p {
+  font-size: 12px;
+  float: right;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  color: rgb(88, 52, 4);
+  font-weight: bold;
+}
